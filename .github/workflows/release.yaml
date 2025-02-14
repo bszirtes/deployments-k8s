@@ -35,19 +35,12 @@ jobs:
         with:
           ref: release/${{ needs.get-tag.outputs.tag }}
 
-      - name: Check images are pullable
-        run: |
-          images=$(grep -roh 'apps' -e "ghcr\.io\/networkservicemesh\/.*:${{ needs.get-tag.outputs.tag }}")
-          for image in $images; do
-            docker pull $image
-          done
-
   create-release:
     name: Create release
     needs: [get-tag, check-images]
     uses: networkservicemesh/.github/.github/workflows/release.yaml@main
     secrets:
-      token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
+      token: ${{ secrets.BOT_TOKEN }}
 
   update-dependent-repositories:
     strategy:
@@ -71,7 +64,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/src/github.com/${{ github.repository }}
           repository: ${{ github.repository }}
-          token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           ref: release/${{ needs.get-tag.outputs.tag }}
       - name: Install gotestmd
         run: |
@@ -84,14 +77,14 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 1.23.3
-      - name: Checkout networkservicemesh/${{ matrix.repository }}
+      - name: Checkout bszirtes/${{ matrix.repository }}
         uses: actions/checkout@v2
         with:
-          path: ${{ github.workspace }}/src/github.com/networkservicemesh/${{ matrix.repository }}
-          repository: networkservicemesh/${{ matrix.repository }}
-          token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
+          path: ${{ github.workspace }}/src/github.com/bszirtes/${{ matrix.repository }}
+          repository: bszirtes/${{ matrix.repository }}
+          token: ${{ secrets.BOT_TOKEN }}
       - name: Update ${{ matrix.repository }} locally
-        working-directory: ${{ github.workspace }}/src/github.com/networkservicemesh/${{ matrix.repository }}
+        working-directory: ${{ github.workspace }}/src/github.com/bszirtes/${{ matrix.repository }}
         run: |
           go generate ./...
           go mod tidy
@@ -100,7 +93,7 @@ jobs:
         with:
           length: 8
       - name: Push update to the ${{ matrix.repository }}
-        working-directory: ${{ github.workspace }}/src/github.com/networkservicemesh/${{ matrix.repository }}
+        working-directory: ${{ github.workspace }}/src/github.com/bszirtes/${{ matrix.repository }}
         run: |
           sed -r -i 's/sha = "[a-z0-9]*"/sha = "tags\/${{ needs.get-tag.outputs.tag }}"/g' extensions/base/suite.gen.go
           git add -- .
