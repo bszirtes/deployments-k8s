@@ -12,7 +12,7 @@ Make sure that you have completed steps from [basic](../../basic) or [memory](..
 
 Deploy NSC, services and NSEs:
 ```bash
-kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/features/exclude-prefixes-client?ref=2e1e4cf3d5f7f29150892b54ef31b963fc82a7a6
+kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/features/exclude-prefixes-client?ref=fb9b63cf74e0a1ff0a0b2eefe6b3b95b1b012913
 ```
 
 Wait for applications ready:
