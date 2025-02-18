@@ -13,7 +13,7 @@ Make sure that you have completed steps from [basic](../../basic).
 
 Deploy NSC and NSE:
 ```bash
-kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nsm-system-restart-memif-ip?ref=8502255799e29e2127b9caa449fb2fb4af16ad07
+kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nsm-system-restart-memif-ip?ref=844c34f949e635a8d957d77cb7bbcf0120384047
 ```
 
 Wait for applications ready:
@@ -47,7 +47,7 @@ kubectl delete ns nsm-system
 kubectl create ns nsm-system
 ```
 ```bash
-kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/basic?ref=8502255799e29e2127b9caa449fb2fb4af16ad07
+kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/basic?ref=844c34f949e635a8d957d77cb7bbcf0120384047
 ```
 
 Ping from NSC to NSE:
