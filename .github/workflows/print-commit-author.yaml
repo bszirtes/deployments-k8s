@@ -1,3 +1,4 @@
+---
 name: Print Commit Author
 
 on:
@@ -8,9 +9,8 @@ on:
 jobs:
   print_author:
     runs-on: ubuntu-latest
-    if: ${{ github.event.commits[0].author.name == 'bszirtes' }}
     steps:
       - name: Print commit author
         id: print_author
-        run: echo "The author was bszirtes"
+        run: echo "${{ github.event.commits[0].author.name }}"
 
