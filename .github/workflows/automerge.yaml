@@ -21,7 +21,7 @@ jobs:
 
   automerge:
     needs: [check-mergeability]
-    if: ${{ needs.check-mergeability.outputs.pr_branch_ref != && startsWith(github.event.workflow_run.head_commit.message, '[github-actions]') }}
+    if: ${{ needs.check-mergeability.outputs.pr_branch_ref != '' && startsWith(github.event.workflow_run.head_commit.message, '[github-actions]') }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
