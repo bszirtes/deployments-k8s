@@ -13,15 +13,8 @@ jobs:
     steps:
       - uses: hmarr/debug-action@v3
 
-  check-mergeability:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    uses: networkservicemesh/.github/.github/workflows/check-mergeability.yaml@main
-    secrets:
-      token: ${{ secrets.BOT_TOKEN }}
-
   automerge:
-    needs: [check-mergeability]
-    if: ${{ needs.check-mergeability.outputs.pr_branch_ref != '' && startsWith(github.event.workflow_run.head_commit.message, '[github-actions]') }}
+    if: ${{ startsWith(github.event.workflow_run.head_commit.message, '[github-actions]') }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
