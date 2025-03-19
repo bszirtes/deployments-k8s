@@ -1,5 +1,5 @@
 ---
-name: Update dependent repositories 2
+name: Update dependent repositories (default)
 on:
   workflow_run:
     types:
