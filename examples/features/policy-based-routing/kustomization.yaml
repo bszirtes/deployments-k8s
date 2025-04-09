@@ -7,9 +7,8 @@ namespace: ns-policy-based-routing
 resources:
 - ns-policy-based-routing.yaml
 - client.yaml
-- config-file-nse.yaml
 - netsvc.yaml
-- ../../../apps/nse-kernel
+- ../../../apps/nse-kernel-pbr
 
 patches:
 - path: patch-nse.yaml

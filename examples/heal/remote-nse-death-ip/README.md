@@ -13,12 +13,12 @@ Make sure that you have completed steps from [basic](../../basic) or [memory](..
 
 Deploy NSC and NSE:
 ```bash
-kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nse-death-ip/nse-before-death?ref=204e2ec919848d7fea28075f63db3c23089e0c90
+kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nse-death-ip/nse-before-death?ref=0e8c3ce7819f0640d955dc1136a64ecff2ae8c56
 ```
 
 Wait for applications ready:
 ```bash
-kubectl wait --for=condition=ready --timeout=1m pod -l app=alpine -n ns-remote-nse-death-ip
+kubectl wait --for=condition=ready --timeout=1m pod -l app=nettools -n ns-remote-nse-death-ip
 ```
 ```bash
 kubectl wait --for=condition=ready --timeout=1m pod -l app=nse-kernel -n ns-remote-nse-death-ip
@@ -26,7 +26,7 @@ kubectl wait --for=condition=ready --timeout=1m pod -l app=nse-kernel -n ns-remo
 
 Ping from NSC to NSE:
 ```bash
-kubectl exec pods/alpine -n ns-remote-nse-death-ip -- ping -c 4 172.16.1.100
+kubectl exec pods/nettools -n ns-remote-nse-death-ip -- ping -c 4 172.16.1.100
 ```
 
 Ping from NSE to NSC:
@@ -36,7 +36,7 @@ kubectl exec deployments/nse-kernel -n ns-remote-nse-death-ip -- ping -c 4 172.1
 
 Apply patch. It recreates NSE with a new label:
 ```bash
-kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nse-death-ip/nse-after-death?ref=204e2ec919848d7fea28075f63db3c23089e0c90
+kubectl apply -k https://github.com/networkservicemesh/deployments-k8s/examples/heal/remote-nse-death-ip/nse-after-death?ref=0e8c3ce7819f0640d955dc1136a64ecff2ae8c56
 ```
 
 Wait for new NSE to start:
@@ -51,7 +51,7 @@ NEW_NSE=$(kubectl get pods -l app=nse-kernel -l version=new -n ns-remote-nse-dea
 
 Ping from NSC to new NSE:
 ```bash
-kubectl exec pods/alpine -n ns-remote-nse-death-ip -- ping -c 4 172.16.1.102
+kubectl exec pods/nettools -n ns-remote-nse-death-ip -- ping -c 4 172.16.1.102
 ```
 
 Ping from new NSE to NSC:
