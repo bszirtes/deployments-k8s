@@ -46,7 +46,7 @@ jobs:
     strategy:
       matrix:
         repository:
-          - integration-tests
+          - integration-tests-1
     name: Update ${{ matrix.repository }}
     needs: [get-tag, create-release]
     runs-on: ubuntu-latest
