@@ -35,6 +35,13 @@ jobs:
         with:
           ref: release/${{ needs.get-tag.outputs.tag }}
 
+      - name: Check images are pullable
+        run: |
+          images=$(grep -roh 'apps' -e "ghcr\.io\/bszirtes\/sdk-k8s.*:${{ needs.get-tag.outputs.tag }}")
+          for image in $images; do
+            docker pull $image
+          done
+
   create-release:
     name: Create release
     needs: [get-tag, check-images]
