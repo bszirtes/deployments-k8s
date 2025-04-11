@@ -37,7 +37,7 @@ jobs:
 
       - name: Check images are pullable
         run: |
-          images="ghcr\.io\/bszirtes\/cmd-registry-k8s:${{ needs.get-tag.outputs.tag }}"
+          images="ghcr.io/bszirtes/cmd-registry-k8s:${{ needs.get-tag.outputs.tag }}"
           echo $images
           for image in $images; do
             docker pull $image
