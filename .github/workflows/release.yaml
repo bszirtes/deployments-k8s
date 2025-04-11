@@ -37,7 +37,7 @@ jobs:
 
       - name: Check images are pullable
         run: |
-          images=$(grep -roh 'apps' -e "ghcr\.io\/bszirtes\/sdk-k8s.*:${{ needs.get-tag.outputs.tag }}")
+          images=$(grep -roh 'apps' -e "ghcr\.io\/bszirtes\/cmd-registry-k8s.*:${{ needs.get-tag.outputs.tag }}")
           for image in $images; do
             docker pull $image
           done
