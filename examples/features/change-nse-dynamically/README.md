@@ -10,7 +10,7 @@ Make sure that you have completed steps from [basic](../../basic) or [ipsec mech
 
 Deploy NSC and two NSEs:
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/features/change-nse-dynamically?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/features/change-nse-dynamically?ref=v0.1.30
 ```
 
 ```bash
