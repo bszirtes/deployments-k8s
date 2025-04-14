@@ -42,8 +42,8 @@ kubectl --kubeconfig=$KUBECONFIG2 apply -f https://github.com/bszirtes/deploymen
 
 Start `auto-scale` networkservicemesh endpoints:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-client?ref=98d12834ac8b2af512570763c7d6eccb2151f778
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-server?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-client?ref=v0.1.31
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-server?ref=v0.1.31
 ```
 
 Create kubernetes service for the networkservicemesh proxy-endpoint:
@@ -103,8 +103,8 @@ pkill -f "port-forward"
 ```bash
 kubectl --kubeconfig=$KUBECONFIG1 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_consul/server/counting_nsm.yaml
 kubectl --kubeconfig=$KUBECONFIG1 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_consul/client/dashboard.yaml
-kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-client?ref=98d12834ac8b2af512570763c7d6eccb2151f778
-kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-server?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-client?ref=v0.1.31
+kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_consul/nse-auto-scale-server?ref=v0.1.31
 kubectl --kubeconfig=$KUBECONFIG2 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_consul/service.yaml
 kubectl --kubeconfig=$KUBECONFIG2 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_consul/server/counting_service.yaml
 kubectl --kubeconfig=$KUBECONFIG2 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_consul/netsvc.yaml
