@@ -16,17 +16,17 @@ In this example, NSM-system is deployed on three clusters. The third cluster is 
 
 Apply NSM resources for cluster1:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster1?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster1?ref=v0.1.33
 ```
 
 Apply NSM resources for cluster2:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster2?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster2?ref=v0.1.33
 ```
 
 Apply NSM resources for cluster3:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster3?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/basic/cluster3?ref=v0.1.33
 ```
 
 Wait for nsmgr-proxy-service exposing:
