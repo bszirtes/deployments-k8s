@@ -6,7 +6,7 @@ This setup deploys SPIRE along with [SPIFFE CSI driver](https://github.com/spiff
 
 To apply spire deployments following the next command:
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/spire/single_cluster_csi?ref=b65aec2b2cbf74adb05b5e3796a3ed7dcd6358a4
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/spire/single_cluster_csi?ref=v0.1.38
 ```
 
 Wait for PODs status ready:

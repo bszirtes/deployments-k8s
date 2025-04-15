@@ -9,7 +9,7 @@ NSC and NSE are using the `kernel` mechanism to connect to its local forwarder.
 
 Deploy NSC and NSE:
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/features/ipv6/Kernel2Kernel_ipv6?ref=b65aec2b2cbf74adb05b5e3796a3ed7dcd6358a4
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/features/ipv6/Kernel2Kernel_ipv6?ref=v0.1.38
 ```
 
 Wait for applications ready:
