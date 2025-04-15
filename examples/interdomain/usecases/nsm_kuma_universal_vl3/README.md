@@ -7,7 +7,7 @@ Make sure that you have completed steps from [multiservicemesh](../../suites/mul
 ## Run
 1. Start vl3
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_kuma_universal_vl3/vl3-dns?ref=aaf1e1522fbe81126acda26e7d83cb3571fd3baa
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_kuma_universal_vl3/vl3-dns?ref=v0.1.37
 kubectl --kubeconfig=$KUBECONFIG1 -n ns-dns-vl3 wait --for=condition=ready --timeout=5m pod -l app=vl3-ipam
 ```
 
