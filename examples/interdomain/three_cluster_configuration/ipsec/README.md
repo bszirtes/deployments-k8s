@@ -19,7 +19,7 @@ Prioritize IPSec over other remote mechanisms
 Apply NSM resources for basic tests:
 
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster1?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster1?ref=v0.1.35
 ```
 
 Wait for nsmgr-proxy-service exposing:
@@ -38,7 +38,7 @@ kubectl --kubeconfig=$KUBECONFIG1 wait --for=condition=ready --timeout=1m pod ${
 Apply NSM resources for basic tests:
 
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster2?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster2?ref=v0.1.35
 ```
 
 Wait for nsmgr-proxy-service exposing:
@@ -57,7 +57,7 @@ kubectl --kubeconfig=$KUBECONFIG2 wait --for=condition=ready --timeout=1m pod ${
 Apply NSM resources for basic tests:
 
 ```bash
-kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster3?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/three_cluster_configuration/ipsec/cluster3?ref=v0.1.35
 ```
 
 Wait for nsmgr-proxy-service exposing:

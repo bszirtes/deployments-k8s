@@ -41,7 +41,7 @@ kubectl --kubeconfig=$KUBECONFIG1 apply -f https://github.com/bszirtes/deploymen
 
 Start `auto-scale` networkservicemesh endpoint:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_istio_booking/nse-auto-scale?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_istio_booking/nse-auto-scale?ref=v0.1.35
 ```
 
 Install istio booking example
@@ -74,7 +74,7 @@ You have made a interdomain connection between two clusters via NSM + Istio!
 
 ```bash
 kubectl --kubeconfig=$KUBECONFIG2 delete -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/bookinfo/platform/kube/bookinfo.yaml
-kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_istio_booking/nse-auto-scale?ref=98d12834ac8b2af512570763c7d6eccb2151f778 
+kubectl --kubeconfig=$KUBECONFIG2 delete -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/nsm_istio_booking/nse-auto-scale?ref=v0.1.35 
 kubectl --kubeconfig=$KUBECONFIG1 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_istio_booking/productpage/productpage.yaml
 kubectl --kubeconfig=$KUBECONFIG2 delete -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/interdomain/usecases/nsm_istio_booking/netsvc.yaml
 kubectl --kubeconfig=$KUBECONFIG2 delete ns istio-system

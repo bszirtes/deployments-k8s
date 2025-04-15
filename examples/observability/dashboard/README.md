@@ -15,7 +15,7 @@ The dashboard consists of two parts:
 To run the dashboard in the cluster, execute the command:
 
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/apps/dashboard?ref=98d12834ac8b2af512570763c7d6eccb2151f778
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/apps/dashboard?ref=v0.1.35
 ```
 
 Wait for the dashboard pod to start:
