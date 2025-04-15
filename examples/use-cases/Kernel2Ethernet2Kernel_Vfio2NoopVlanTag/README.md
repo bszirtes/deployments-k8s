@@ -8,7 +8,7 @@ This example shows that remote kernel over Ethernet connection and VFIO connecti
 
 Deploy NSCs and NSEs:
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/use-cases/Kernel2Ethernet2Kernel_Vfio2NoopVlanTag?ref=aaf1e1522fbe81126acda26e7d83cb3571fd3baa
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/use-cases/Kernel2Ethernet2Kernel_Vfio2NoopVlanTag?ref=b65aec2b2cbf74adb05b5e3796a3ed7dcd6358a4
 ```
 
 Wait for applications ready:
