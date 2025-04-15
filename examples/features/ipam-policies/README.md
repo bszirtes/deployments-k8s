@@ -58,7 +58,7 @@ kubectl delete pod -l app=first-nse -n ns-ipam-policies
 
 Apply the second NSE with CIDR `172.16.2.0/29` and `strict` IPAM Policy:
 ```bash
-kubectl apply -f https://github.com/bszirtes/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/features/ipam-policies/second-nse.yaml -n ns-ipam-policies
+kubectl apply -f https://github.com/networkservicemesh/deployments-k8s/0e8c3ce7819f0640d955dc1136a64ecff2ae8c56/examples/features/ipam-policies/second-nse.yaml -n ns-ipam-policies
 ```
 
 Wait for application ready:
