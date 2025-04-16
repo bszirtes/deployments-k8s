@@ -7,7 +7,7 @@ This example shows that vl3 network recovers itself after dataplane interruption
 
 Deploy clients and vl3 nses:
 ```bash
-kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/heal/vl3-dataplane-interrupt?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl apply -k https://github.com/bszirtes/deployments-k8s/examples/heal/vl3-dataplane-interrupt?ref=v0.1.41
 ```
 
 Wait for clients to be ready:

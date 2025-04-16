@@ -16,13 +16,13 @@ In this example, NSM-system is deployed on two clusters.
 Apply NSM resources for cluster1:
 
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/two_cluster_configuration/basic/cluster1?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/two_cluster_configuration/basic/cluster1?ref=v0.1.41
 ```
 
 Apply NSM resources for cluster2:
 
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/two_cluster_configuration/basic/cluster2?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/two_cluster_configuration/basic/cluster2?ref=v0.1.41
 ```
 
 Wait for NSM admission webhook on cluster 1:

@@ -20,14 +20,14 @@ Make sure that you have completed steps from [interdomain](../../suites/basic)
 
 Deploy NS:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster3?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster3?ref=v0.1.41
 ```
 
 **2. Deploy endpoint on cluster2**
 
 Deploy NSE:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster2?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster2?ref=v0.1.41
 ```
 
 Wait for applications ready:
@@ -39,7 +39,7 @@ kubectl --kubeconfig=$KUBECONFIG2 wait --for=condition=ready --timeout=2m pod -l
 
 Deploy NSC:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster1?ref=ce845a16f06e25a97be64723da300c7f92a730f0
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/floating_Memif2IP2Memif/cluster1?ref=v0.1.41
 ```
 
 Wait for applications ready:
