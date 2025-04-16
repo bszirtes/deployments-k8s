@@ -18,14 +18,14 @@ Make sure that you have completed steps from [heal](../../suites/heal)
 
 Deploy NS:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster3?ref=16c95000d6830e7e9a8cb20b2cf6b5f912c467fb
+kubectl --kubeconfig=$KUBECONFIG3 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster3?ref=ce845a16f06e25a97be64723da300c7f92a730f0
 ```
 
 **2. Deploy endpoint on cluster2**
 
 Deploy NSE:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster2?ref=16c95000d6830e7e9a8cb20b2cf6b5f912c467fb
+kubectl --kubeconfig=$KUBECONFIG2 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster2?ref=ce845a16f06e25a97be64723da300c7f92a730f0
 ```
 
 Wait for applications ready:
@@ -37,7 +37,7 @@ kubectl --kubeconfig=$KUBECONFIG2 wait --for=condition=ready --timeout=1m pod -l
 
 Deploy NSC:
 ```bash
-kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster1?ref=16c95000d6830e7e9a8cb20b2cf6b5f912c467fb
+kubectl --kubeconfig=$KUBECONFIG1 apply -k https://github.com/bszirtes/deployments-k8s/examples/interdomain/usecases/heal_floating-nse-death/cluster1?ref=ce845a16f06e25a97be64723da300c7f92a730f0
 ```
 
 Wait for applications ready:
